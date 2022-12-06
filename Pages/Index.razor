@@ -1,16 +1,51 @@
 ﻿@page "/"
 
 <h1> Hey there @UserName </h1>
-<button onclick="@(() => {UserName = "Enoch";})">ChangeName</button>
+<button onclick="@(() => { UserName = "Enoch"; })">ChangeName</button>
+
+@if (TestNum == 2)
+{
+    <p>Test Num is 1</p>
+}
+else
+{
+    <p>Test Num is not 1</p>
+} 
+
+@foreach (var name in names)
+{
+    <p>@name</p>
+} 
 
 @code
 {
     private string UserName = "John M";
+    
+    private int TestNum = 1;
+
+    private List<string> names;
+    
+    protected override void OnInitialized()
+    {
+        names = new()
+        {
+            "This is 1",
+            "This is 2",
+            "This is 3",
+            "This is 4",
+            "This is 5",
+            "This is 6",
+            "This is 7",
+            "This is 8",
+            "This is 9"
+        };
+        base.OnInitialized();
+    }
+    
     private string GetUsername()
     {
         return UserName;
-    }
-    
+    }  
 
     private int GetSum()
     {
@@ -18,3 +53,4 @@
     }
 
 }
+
