@@ -45,6 +45,39 @@
         }
       },
       {
+        "HashCode": 2145420798,
+        "Kind": "Components.Component",
+        "Name": "BlazorDemo.APP.Pages.Counter",
+        "AssemblyName": "BlazorDemo.APP",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Counter"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorDemo.APP.Pages.Counter"
+        }
+      },
+      {
+        "HashCode": 205434302,
+        "Kind": "Components.Component",
+        "Name": "BlazorDemo.APP.Pages.Counter",
+        "AssemblyName": "BlazorDemo.APP",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorDemo.APP.Pages.Counter"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorDemo.APP.Pages.Counter",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 1190832222,
         "Kind": "Components.Component",
         "Name": "BlazorDemo.APP.Pages.Index",
@@ -164,6 +197,39 @@
         }
       },
       {
+        "HashCode": -5927615,
+        "Kind": "Components.Component",
+        "Name": "BlazorDemo.APP.Shared.NavMenu",
+        "AssemblyName": "BlazorDemo.APP",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorDemo.APP.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": -757901693,
+        "Kind": "Components.Component",
+        "Name": "BlazorDemo.APP.Shared.NavMenu",
+        "AssemblyName": "BlazorDemo.APP",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorDemo.APP.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorDemo.APP.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 1490973857,
         "Kind": "Components.Component",
         "Name": "BlazorDemo.APP.Shared.MainLayout",
@@ -256,39 +322,6 @@
           "Runtime.Name": "Components.None",
           "Common.TypeName": "BlazorDemo.APP.Shared.MainLayout.Body",
           "Components.IsSpecialKind": "Components.ChildContent",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -5927615,
-        "Kind": "Components.Component",
-        "Name": "BlazorDemo.APP.Shared.NavMenu",
-        "AssemblyName": "BlazorDemo.APP",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorDemo.APP.Shared.NavMenu"
-        }
-      },
-      {
-        "HashCode": -757901693,
-        "Kind": "Components.Component",
-        "Name": "BlazorDemo.APP.Shared.NavMenu",
-        "AssemblyName": "BlazorDemo.APP",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorDemo.APP.Shared.NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "BlazorDemo.APP.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
