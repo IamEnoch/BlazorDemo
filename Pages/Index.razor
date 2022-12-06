@@ -1,13 +1,20 @@
 ﻿@page "/"
 
-<h1> Hey there @GetUsername() </h1>
+<h1> Hey there @UserName </h1>
+<button onclick="@(() => {UserName = "Enoch";})">ChangeName</button>
 
 @code
 {
-    public String Username = "John";
+    private string UserName = "John M";
     private string GetUsername()
     {
-        return Username + " Enoch";
+        return UserName;
+    }
+    
+
+    private int GetSum()
+    {
+        return 2+2;
     }
 
 }
