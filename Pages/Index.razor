@@ -1,56 +1,48 @@
 ﻿@page "/"
 
-<h1> Hey there @UserName </h1>
-<button onclick="@(() => { UserName = "Enoch"; } )">Change Name</button>
-
-@if (TestNum == 2)
+@foreach (var contact in contacts)
 {
-    <p>Test Num is 1</p>
-}
-else
-{
-    <p>Test Num is not 1</p>
-} 
+    <p>
+        <b>Name: </b><span> @contact.FirstName @contact.LastName</span><br>
+        <b>Email: </b><i>@contact.Email</i>
+    </p>
+}   
 
-@foreach (var name in names)
-{
-    <p>@name</p>
-} 
+@code{
 
-@code
-{
-    private string UserName = "John M";
-    
-    private int TestNum = 1;
+    private List<Contact> contacts;
 
-    private List<string> names;
-    
-    protected override void OnInitialized()
-    {
-        names = new()
+        protected override void OnInitialized()
         {
-            "This is 1",
-            "This is 2",
-            "This is 3",
-            "This is 4",
-            "This is 5",
-            "This is 6",
-            "This is 7",
-            "This is 8",
-            "This is 9"
-        };
-        base.OnInitialized();
-    }
-    
-    private string GetUsername()
-    {
-        return UserName;
-    }  
+            base.OnInitialized();
 
-    private int GetSum()
-    {
-        return 2+2;
-    }
-
+            contacts = new()
+            {
+                new Contact
+                {
+                    FirstName = "Enoch",
+                    LastName = "Mwangi",
+                    Email = "enoch@gmail.com"
+                },
+                new Contact
+                {
+                    FirstName = "John",
+                    LastName = "Doe",
+                    Email = "john@gmail.com"
+                },
+                new Contact
+                {
+                    FirstName = "Lucas",
+                    LastName = "Moura",
+                    Email = "lucas@gmail.com"
+                },
+                new Contact
+                {
+                    FirstName = "Emily",
+                    LastName = "Wahito",
+                    Email = "emily@gmail.com"
+                }
+            };
+        }               
 }
 
