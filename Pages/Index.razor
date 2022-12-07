@@ -1,11 +1,9 @@
 ﻿@page "/"
+@using BlazorDemo.APP.Pages.ContactComponents
 
 @foreach (var contact in contacts)
 {
-    <p>
-        <b>Name: </b><span> @contact.FirstName @contact.LastName</span><br>
-        <b>Email: </b><i>@contact.Email</i>
-    </p>
+    <ContactComponent01 FirstName = "@contact.FirstName" LastName = "@contact.LastName" Email = "@contact.Email" ></ContactComponent01>
 }   
 
 @code{

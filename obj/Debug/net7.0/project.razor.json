@@ -111,6 +111,91 @@
         }
       },
       {
+        "HashCode": 472829650,
+        "Kind": "Components.Component",
+        "Name": "BlazorDemo.APP.Pages.ContactComponents.ContactComponent01",
+        "AssemblyName": "BlazorDemo.APP",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ContactComponent01"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "FirstName",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "FirstName"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "LastName",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "LastName"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Email",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Email"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorDemo.APP.Pages.ContactComponents.ContactComponent01"
+        }
+      },
+      {
+        "HashCode": 1736224807,
+        "Kind": "Components.Component",
+        "Name": "BlazorDemo.APP.Pages.ContactComponents.ContactComponent01",
+        "AssemblyName": "BlazorDemo.APP",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BlazorDemo.APP.Pages.ContactComponents.ContactComponent01"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "FirstName",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "FirstName"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "LastName",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "LastName"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Email",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Email"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "BlazorDemo.APP.Pages.ContactComponents.ContactComponent01",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 1256185152,
         "Kind": "Components.Component",
         "Name": "BlazorDemo.APP.App",
@@ -16896,6 +16981,11 @@
     {
       "FilePath": "d:\\BlazorDemo.APP\\BlazorDemo.APP\\Shared\\MainLayout.razor",
       "TargetPath": "Shared\\MainLayout.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "d:\\BlazorDemo.APP\\BlazorDemo.APP\\Pages\\ContactComponents\\ContactComponent01.razor",
+      "TargetPath": "Pages\\ContactComponents\\ContactComponent01.razor",
       "FileKind": "component"
     },
     {
