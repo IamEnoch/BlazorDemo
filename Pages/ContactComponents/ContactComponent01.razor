@@ -1,16 +1,18 @@
 <p>
-    <b>Name: </b><span> @FirstName @LastName</span><br>
-    <b>Email: </b><i>@Email</i>
+    <b>Name: </b><span> @MyContact.FirstName @MyContact.LastName</span><br>
+    <b>Email: </b><i>@MyContact.Email</i><br>
+
+    @if (dispayInfo)
+    {
+        <span>The Email of @MyContact.FirstName @MyContact.LastName is @MyContact.Email </span> <br>       
+    }
+    <button onclick="@(() => { dispayInfo = !dispayInfo; })">Dispaly Info</button>
 </p>
 
-@code{
+@code{   
     [Parameter]
-    public string FirstName { get; set; }
+    public Contact MyContact { get; set; }
 
-    [Parameter]
-    public string LastName { get; set; }
-    
-    [Parameter]
-    public string Email { get; set; }
+    private bool dispayInfo = true;
 
 }

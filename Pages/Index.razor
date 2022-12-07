@@ -3,14 +3,14 @@
 
 <CustomTextbox @attributes="@MyTextBoxAttributes"></CustomTextbox>
 
+
 @foreach (var contact in contacts)
 {
-    <ContactComponent01 FirstName="@contact.FirstName" LastName="@contact.LastName" Email="@contact.Email">
-    </ContactComponent01>
+    <ContactComponent01 MyContact = "@contact" ></ContactComponent01>
 }
 
 @code {
-
+    
     private List<Contact> contacts;
     private Dictionary<string, object> MyTextBoxAttributes = new()
     {
