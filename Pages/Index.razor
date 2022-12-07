@@ -1,46 +1,54 @@
 ﻿@page "/"
 @using BlazorDemo.APP.Pages.ContactComponents
 
+<CustomTextbox @attributes="@MyTextBoxAttributes"></CustomTextbox>
+
 @foreach (var contact in contacts)
 {
-    <ContactComponent01 FirstName = "@contact.FirstName" LastName = "@contact.LastName" Email = "@contact.Email" ></ContactComponent01>
-}   
-
-@code{
-
-    private List<Contact> contacts;
-
-        protected override void OnInitialized()
-        {
-            base.OnInitialized();
-
-            contacts = new()
-            {
-                new Contact
-                {
-                    FirstName = "Enoch",
-                    LastName = "Mwangi",
-                    Email = "enoch@gmail.com"
-                },
-                new Contact
-                {
-                    FirstName = "John",
-                    LastName = "Doe",
-                    Email = "john@gmail.com"
-                },
-                new Contact
-                {
-                    FirstName = "Lucas",
-                    LastName = "Moura",
-                    Email = "lucas@gmail.com"
-                },
-                new Contact
-                {
-                    FirstName = "Emily",
-                    LastName = "Wahito",
-                    Email = "emily@gmail.com"
-                }
-            };
-        }               
+    <ContactComponent01 FirstName="@contact.FirstName" LastName="@contact.LastName" Email="@contact.Email">
+    </ContactComponent01>
 }
 
+@code {
+
+    private List<Contact> contacts;
+    private Dictionary<string, object> MyTextBoxAttributes = new()
+    {
+        { "disabled", "disabled" },
+        { "placeholder", "Me" },
+        { "type", "text" }
+    };
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        contacts = new()
+        {
+            new Contact
+            {
+                FirstName = "Enoch",
+                LastName = "Mwangi",
+                Email = "enoch@gmail.com"
+            },
+            new Contact
+            {
+                FirstName = "John",
+                LastName = "Doe",
+                Email = "john@gmail.com"
+            },
+            new Contact
+            {
+                FirstName = "Lucas",
+                LastName = "Moura",
+                Email = "lucas@gmail.com"
+            },
+            new Contact
+            {
+                FirstName = "Emily",
+                LastName = "Wahito",
+                Email = "emily@gmail.com"
+            }
+        };
+    }
+}
