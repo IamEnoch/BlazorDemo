@@ -24,6 +24,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdENvbXBvbmVudHNcQ29udGFjdENvbXBvbmVudDAxLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/BlazorDemo.APP/BlazorDemo.APP/Pages/ContactComponents/ContactList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdENvbXBvbmVudHNcQ29udGFjdExpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/BlazorDemo.APP/BlazorDemo.APP/Pages/ContactComponents/CustomTextbox.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdENvbXBvbmVudHNcQ3VzdG9tVGV4dGJveC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

@@ -3,11 +3,8 @@
 
 <CustomTextbox @attributes="@MyTextBoxAttributes"></CustomTextbox>
 
+<ContactList Contacts="_contacts"></ContactList>
 
-@foreach (var contact in _contacts)
-{
-    <ContactComponent01 _currentContact = "@contact" DeleteCurrentContact="@DeleteContact"></ContactComponent01>
-}
 
 @code {
     
@@ -19,10 +16,7 @@
         { "type", "text" }
     };
 
-    private void DeleteContact(Contact contact)
-    {
-        _contacts.Remove(contact);
-    }
+    
 
     protected override void OnInitialized()
     {

@@ -1,0 +1,15 @@
+﻿@foreach (var contact in Contacts)
+{
+    <ContactComponent01 _currentContact="@contact" DeleteCurrentContact="@DeleteContact"></ContactComponent01>
+}
+
+@code
+{
+    [Parameter]
+    public List<Contact> Contacts { get; set; }
+
+    private void DeleteContact(Contact contact)
+    {
+        Contacts.Remove(contact);
+    }   
+}
