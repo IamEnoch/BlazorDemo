@@ -1,6 +1,22 @@
-﻿@foreach (var contact in Contacts)
+﻿@if (Contacts == null)
 {
-    <ContactComponent01 _currentContact="@contact" DeleteCurrentContact="@DeleteContact"></ContactComponent01>
+    <br/>
+    <span>Contents are loading</span>
+    <br/>
+
+}
+else if(Contacts.Count == 0)
+{
+    <br/>
+    <span>No contact to show</span>
+    <br/>  
+}
+else
+{
+    @foreach (var contact in Contacts)
+    {
+        <ContactComponent01 _currentContact="@contact" DeleteCurrentContact="@DeleteContact"></ContactComponent01>
+    }
 }
 
 @code
