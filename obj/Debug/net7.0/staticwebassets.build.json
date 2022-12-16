@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hxk3Jahhyh2kwqmjNXZnaCiIv1ajeT9igKlzzu/Oaoo=",
+  "Hash": "VnGpu5rSrDJSUgeq4ArX2Y3aS23G/WtaPrYVhP9lXXs=",
   "Source": "BlazorDemo.APP",
   "BasePath": "_content/BlazorDemo.APP",
   "Mode": "Default",
@@ -83,23 +83,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
-    },
-    {
-      "Identity": "D:\\BlazorDemo.APP\\BlazorDemo.APP\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
-      "SourceId": "BlazorDemo.APP",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\BlazorDemo.APP\\BlazorDemo.APP\\wwwroot\\",
-      "BasePath": "_content/BlazorDemo.APP",
-      "RelativePath": "css/open-iconic/FONT-LICENSE",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
       "Identity": "D:\\BlazorDemo.APP\\BlazorDemo.APP\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
@@ -202,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Identity": "D:\\BlazorDemo.APP\\BlazorDemo.APP\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "SourceId": "BlazorDemo.APP",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\BlazorDemo.APP\\BlazorDemo.APP\\wwwroot\\",
+      "BasePath": "_content/BlazorDemo.APP",
+      "RelativePath": "css/open-iconic/FONT-LICENSE",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
       "Identity": "D:\\BlazorDemo.APP\\BlazorDemo.APP\\wwwroot\\css\\open-iconic\\ICON-LICENSE",

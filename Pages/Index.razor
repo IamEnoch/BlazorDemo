@@ -4,26 +4,31 @@
 <CustomTextbox @attributes="@MyTextBoxAttributes"></CustomTextbox>
 
 
-@foreach (var contact in contacts)
+@foreach (var contact in _contacts)
 {
-    <ContactComponent01 MyContact = "@contact" ></ContactComponent01>
+    <ContactComponent01 _currentContact = "@contact" DeleteCurrentContact="@DeleteContact"></ContactComponent01>
 }
 
 @code {
     
-    private List<Contact> contacts;
-    private Dictionary<string, object> MyTextBoxAttributes = new()
+    private List<Contact> _contacts;
+    private readonly Dictionary<string, object> MyTextBoxAttributes = new()
     {
         { "disabled", "disabled" },
         { "placeholder", "Me" },
         { "type", "text" }
     };
 
+    private void DeleteContact(Contact contact)
+    {
+        _contacts.Remove(contact);
+    }
+
     protected override void OnInitialized()
     {
         base.OnInitialized();
 
-        contacts = new()
+        _contacts = new()
         {
             new Contact
             {

@@ -1,17 +1,21 @@
 <p>
-    <b>Name: </b><span> @MyContact.FirstName @MyContact.LastName</span><br>
-    <b>Email: </b><i>@MyContact.Email</i><br>
+    <b>Name: </b><span> @_currentContact.FirstName @_currentContact.LastName</span><br>
+    <b>Email: </b><i>@_currentContact.Email</i><br>
 
     @if (dispayInfo)
     {
-        <span>The Email of @MyContact.FirstName @MyContact.LastName is @MyContact.Email </span> <br>       
+        <span>The Email of @_currentContact.FirstName @_currentContact.LastName is @_currentContact.Email </span> <br>
     }
-    <button onclick="@(() => { dispayInfo = !dispayInfo; })">Dispaly Info</button>
+    <button @onclick="@(() => { dispayInfo = !dispayInfo; })">Display Info</button><br/>
+    <button @onclick="@(() => DeleteCurrentContact.InvokeAsync(_currentContact))">Delete Contact</button>
 </p>
 
-@code{   
+@code {
     [Parameter]
-    public Contact MyContact { get; set; }
+    public Contact _currentContact { get; set; }
+
+    [Parameter]
+    public EventCallback<Contact> DeleteCurrentContact { get; set; }
 
     private bool dispayInfo = true;
 
