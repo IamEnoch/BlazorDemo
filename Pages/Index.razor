@@ -3,51 +3,16 @@
 
 <CustomTextbox @attributes="@MyTextBoxAttributes"></CustomTextbox>
 
-<ContactList Contacts="_contacts"></ContactList>
+<ContactList Contacts="_contacts">
+    <NullContactsFragment>
+        <br/>
+        <span>Contents are loading</span>
+        <br/>
+    </NullContactsFragment>
+    <ZeroListFragment>
+        <br/>
+        <span>No contact to show</span>
+        <br/>
+    </ZeroListFragment>
+</ContactList>
 
-
-@code {
-    
-    private List<Contact> _contacts;
-    private readonly Dictionary<string, object> MyTextBoxAttributes = new()
-    {
-        { "disabled", "disabled" },
-        { "placeholder", "Me" },
-        { "type", "text" }
-    };
-
-
-    protected override async Task<Task> OnInitializedAsync()
-    {
-        await Task.Delay(5000);
-        _contacts = new()
-        {
-            new Contact
-            {
-                FirstName = "Enoch",
-                LastName = "Mwangi",
-                Email = "enoch@gmail.com"
-            },
-            new Contact
-            {
-                FirstName = "John",
-                LastName = "Doe",
-                Email = "john@gmail.com"
-            },
-            new Contact
-            {
-                FirstName = "Lucas",
-                LastName = "Moura",
-                Email = "lucas@gmail.com"
-            },
-            new Contact
-            {
-                FirstName = "Emily",
-                LastName = "Wahito",
-                Email = "emily@gmail.com"
-            }
-        };
-        return base.OnInitializedAsync();
-    }
-
-}
