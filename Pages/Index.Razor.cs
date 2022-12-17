@@ -21,7 +21,7 @@ namespace BlazorDemo.APP.Pages
                 new Contact
                 {
                     FirstName = "Enoch",
-                    LastName = "Mwangi",
+                    LastName = "Doe",
                     Email = "enoch@gmail.com"
                 },
                 new Contact
