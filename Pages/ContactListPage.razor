@@ -1,0 +1,39 @@
+﻿@page "/ContactList"
+@inject ContactListService ContactListService
+
+<h3>ContactList Page</h3>
+
+<input placeholder="FirstName" @bind="_firstName"/><br/>
+<input placeholder="Last Name" @bind="_lastName" /><br/>
+<input placeholder="Email" @bind="_email"/><br/>
+<button @onclick="AddContact">Add contact</button><br/>
+
+@if (ContactListService.Contacts.Count == 0)
+{
+    <b>No contacts to display</b>
+}
+else
+{
+    @foreach (var contact in ContactListService.Contacts)
+    {
+
+        <b> @contact.FirstName @contact.LastName</b><br/>
+        <i> @contact.Email</i><br/>
+        <br/>
+
+    }
+}
+@code {
+    private string _firstName, _lastName, _email;
+
+    private void AddContact()
+    {
+        Contact contact = new()
+        {
+            FirstName = _firstName,
+            LastName = _lastName,
+            Email = _email
+        };
+        ContactListService.Contacts.Add(contact);
+    }
+}
