@@ -1,9 +1,14 @@
 ﻿using BlazorDemo.APP.Models;
+using BlazorDemo.APP.Pages.ContactComponents;
 
 namespace BlazorDemo.APP.Pages
 {
     public partial class Index
     {
+
+        private ContactList _contactList;
+        private bool _isContactsVisible = true;
+
         private List<Contact> _contacts;
         private readonly Dictionary<string, object> MyTextBoxAttributes = new()
         {
@@ -15,7 +20,6 @@ namespace BlazorDemo.APP.Pages
 
         protected override async Task<Task> OnInitializedAsync()
         {
-            await Task.Delay(5000);
             _contacts = new()
             {
                 new Contact
@@ -44,6 +48,21 @@ namespace BlazorDemo.APP.Pages
                 }
             };
             return base.OnInitializedAsync();
+
+        }
+
+        private void HideContacts()
+        {
+            _isContactsVisible = !_isContactsVisible;
+            if (_isContactsVisible)
+            {
+                _contactList.ShowContacts();
+            }
+            else
+            {
+                _contactList.HideContacts();
+            }
+
         }
     }
 }

@@ -1,17 +1,22 @@
-﻿@if (Contacts == null)
+﻿@inject IJSRuntime JsRuntime
+
+@if (_displayContacts)
 {
-    @NullContactsFragment
-}
-else if(Contacts.Count == 0)
-{
-    @ZeroListFragment
-     
-}
-else
-{
-    @foreach (var contact in Contacts)
+    @if (Contacts == null)
     {
-        <ContactComponent01 _currentContact="@contact" DeleteCurrentContact="@DeleteContact"></ContactComponent01>
+        @NullContactsFragment
+    }
+    else if(Contacts.Count == 0)
+    {
+        @ZeroListFragment
+     
+    }
+    else
+    {
+        @foreach (var contact in Contacts)
+        {
+            <ContactComponent01 _currentContact="@contact" DeleteCurrentContact="@DeleteContact"></ContactComponent01>
+        }
     }
 }
 
@@ -26,8 +31,17 @@ else
     [Parameter]
     public List<Contact> Contacts { get; set; }
 
-    private void DeleteContact(Contact contact)
+    private bool _displayContacts = true;
+
+    private async Task DeleteContact(Contact contact)
     {
-        Contacts.Remove(contact);
-    }   
+        var confirm = await JsRuntime.InvokeAsync<bool>("confirm", $"Are you sure you want to delete {contact.FirstName} {contact.LastName}?");
+        if (confirm)
+            Contacts.Remove(contact);
+        
+    }
+
+    public void ShowContacts() => _displayContacts = true;
+    public void HideContacts() => _displayContacts = false;
+
 }

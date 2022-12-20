@@ -3,7 +3,8 @@
 
 <CustomTextbox @attributes="@MyTextBoxAttributes"></CustomTextbox>
 
-<ContactList Contacts="_contacts">
+<br/>
+<ContactList @ref="_contactList" Contacts="_contacts">
     <NullContactsFragment>
         <br/>
         <span>Contents are loading</span>
@@ -15,4 +16,10 @@
         <br/>
     </ZeroListFragment>
 </ContactList>
+<br/>
+
+<button @onclick="HideContacts">Show/Hide Contacts</button>
+
+<br />
+
 
